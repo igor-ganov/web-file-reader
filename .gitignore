@@ -1,0 +1,20 @@
+node_modules/
+dist/
+.turbo/
+coverage/
+*.tsbuildinfo
+
+# Astro
+.astro/
+packages/wfr-host-astro/dist/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.log
+.setting/
+
+# Env
+.env
+.env.*
+!.env.example

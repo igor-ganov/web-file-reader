@@ -1,0 +1,43 @@
+{
+  "name": "web-file-reader",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Headless, slots-first Lit file-reader monorepo (meta orchestrator). Manages all @web-file-reader/* packages via bun workspaces + git submodules.",
+  "license": "MIT",
+  "author": "Igor Ganov",
+  "homepage": "https://github.com/igor-ganov/web-file-reader",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/igor-ganov/web-file-reader.git"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "bun": ">=1.3.0"
+  },
+  "scripts": {
+    "build": "bun run --filter './packages/*' build",
+    "test": "bun run --filter './packages/*' test",
+    "typecheck": "bun run --filter './packages/*' typecheck",
+    "lint": "eslint .",
+    "dev:host": "bun run --filter wfr-host-astro dev",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "bun run build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.10",
+    "@eslint/js": "^9.17.0",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "eslint": "^9.17.0",
+    "eslint-plugin-lit": "^1.15.0",
+    "eslint-plugin-lit-a11y": "^4.1.4",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0",
+    "vitest": "^2.1.8"
+  }
+}

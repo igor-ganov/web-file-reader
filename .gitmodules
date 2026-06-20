@@ -1,0 +1,40 @@
+[submodule "packages/wfr-core"]
+	path = packages/wfr-core
+	url = https://github.com/igor-ganov/wfr-core.git
+	branch = main
+[submodule "packages/wfr-file-grid"]
+	path = packages/wfr-file-grid
+	url = https://github.com/igor-ganov/wfr-file-grid.git
+	branch = main
+[submodule "packages/wfr-viewer"]
+	path = packages/wfr-viewer
+	url = https://github.com/igor-ganov/wfr-viewer.git
+	branch = main
+[submodule "packages/wfr-navigation"]
+	path = packages/wfr-navigation
+	url = https://github.com/igor-ganov/wfr-navigation.git
+	branch = main
+[submodule "packages/wfr-settings"]
+	path = packages/wfr-settings
+	url = https://github.com/igor-ganov/wfr-settings.git
+	branch = main
+[submodule "packages/wfr-provider-markdown"]
+	path = packages/wfr-provider-markdown
+	url = https://github.com/igor-ganov/wfr-provider-markdown.git
+	branch = main
+[submodule "packages/wfr-provider-image"]
+	path = packages/wfr-provider-image
+	url = https://github.com/igor-ganov/wfr-provider-image.git
+	branch = main
+[submodule "packages/wfr-provider-pdf"]
+	path = packages/wfr-provider-pdf
+	url = https://github.com/igor-ganov/wfr-provider-pdf.git
+	branch = main
+[submodule "packages/wfr-provider-csv"]
+	path = packages/wfr-provider-csv
+	url = https://github.com/igor-ganov/wfr-provider-csv.git
+	branch = main
+[submodule "packages/wfr-host-astro"]
+	path = packages/wfr-host-astro
+	url = https://github.com/igor-ganov/wfr-host-astro.git
+	branch = main
