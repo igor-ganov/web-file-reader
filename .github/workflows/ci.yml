@@ -33,3 +33,11 @@ jobs:
 
       - name: Build host
         run: bun run --filter wfr-host-astro build
+
+      - name: Install Playwright browser
+        run: bunx playwright install --with-deps chromium
+        working-directory: packages/wfr-host-astro
+
+      - name: E2E (behaviour, desktop + mobile)
+        run: bunx playwright test e2e/viewer.spec.ts
+        working-directory: packages/wfr-host-astro
