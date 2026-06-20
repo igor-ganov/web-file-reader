@@ -21,14 +21,15 @@ jobs:
       - name: Install
         run: bun install --frozen-lockfile
 
+      # Build before typecheck so dependents can resolve emitted .d.ts types.
+      - name: Build libraries
+        run: bun run --filter '@web-file-reader/*' build
+
       - name: Typecheck
         run: bun run --filter '@web-file-reader/*' typecheck
 
       - name: Test
         run: bun run --filter '@web-file-reader/*' test
-
-      - name: Build libraries
-        run: bun run --filter '@web-file-reader/*' build
 
       - name: Build host
         run: bun run --filter wfr-host-astro build
