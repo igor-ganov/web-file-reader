@@ -1,0 +1,38 @@
+{
+  "name": "@web-file-reader/provider-docx",
+  "version": "0.1.0",
+  "description": "DOCX (Word) provider for the web-file-reader viewer. Unzips and reads word/document.xml into sanitized HTML; heavy work loaded lazily.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Igor Ganov",
+  "homepage": "https://github.com/igor-ganov/wfr-provider-docx",
+  "repository": { "type": "git", "url": "https://github.com/igor-ganov/wfr-provider-docx.git" },
+  "keywords": ["web-file-reader", "provider", "docx", "word", "ooxml", "lazy"],
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    "./lazy": { "types": "./dist/lazy.d.ts", "import": "./dist/lazy.js" }
+  },
+  "files": ["dist", "src", "README.md"],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@web-file-reader/core": "workspace:*",
+    "dompurify": "^3.2.3",
+    "fflate": "^0.8.2"
+  },
+  "devDependencies": {
+    "jsdom": "^25.0.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "publishConfig": { "access": "public" }
+}
